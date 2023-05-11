@@ -6,25 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Madithati Yuvateja Reddy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: rgb(197,196,200);
+            background: linear-gradient(90deg, rgba(197,196,200,1) 0%, rgb(205, 205, 205) 39%, rgb(184, 184, 184) 100%);
+            padding: 2rem 8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1,h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body > table {
+            background-color: white;
+            padding: 0.7rem;
+            border-radius: 6px;
+        }
+        table h1 {
+            font-size: 3rem;
+        }
+        #profile-container {
+            float: left;
+            margin: 1.5rem;
+            height: 150px;
+            width: 150px;
+            position: relative;
+        }
+
+        img{
+            border-radius: 50%;
+            transition: all 100ms ease-in-out;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            z-index: 1;
+        }
+        #profile-container::after{
+            content: "";
+            width: 105%;
+            height: 105%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            border-radius: 50%;
+            border: solid 3px gray;
+        }
+        #education {
+            clear: left;
+        }
+        table {
+            align-items: center;
+        }
+        .table-left{
+            width: 50rem;
+        }
+        .table-right {
+            width: 15rem;
+        }
+        .table-left h2, p, table, h1 {
+            text-align: center;
+        }
+        .table-left h2, .table-right h2 {
+            color: rgb(23, 103, 224);
+        }
+        .table-left #education {
+            display: grid;
+            place-items: center;
+        }
+        #education table, th, td {
+            border: 1px solid black;
+            
+        }
+        #education td {
+            padding: 0.5rem;
+        }
+        img + h1 + p {
+            text-align: center;
+            padding: 2rem;
+        }
+        table ul > li {
+            list-style: none;
+        }
+        li a {
+            text-decoration: none;
+        }
+        #skills > div {
+            padding: .2rem .6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #social i {
+            font-size: 1.5rem;
+            margin-right: 0.25rem;
+        }
+        #social li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            width: 100%;
+        }
+        footer h2{
+            text-align: right;
+        }
+    </style>
 </head>
-<body style="padding: 2rem 6rem;">
+<body>
     <header>
             <h1 align="center">Resume</h1>
     </header>
-    <table align="center">
+    <table>
         <tr>
-            <td>
+            <td class="table-left">
                 <div>
                     <div>
-                        <img src="./IMG20230325132558.jpg" height="150px" width="115px" style="float: left; margin-right:2rem">
-                        <h1 style="width: 70%; display:inline-block">Madithati Yuvateja Reddy</h1>
-                        <p style="width: 70%; display: inline-block">
+                        <div id="profile-container"><img src="./IMG20230325132558.jpg"></div>
+                        <h1>Madithati Yuvateja Reddy</h1>
+                        <p>
                         Seeking an entry-level position in a reputed organization to become proficient in software engineering
                         and attain an in-depth knowledge of computing systems which results in the development of both company and myself.
                         </p>
                     </div>
                     <div id="education">
-                        <h2>Education</h2>
+                        <h2>Education🏫</h2>
                         <table>
                             <tbody>
                                 <tr>
@@ -49,17 +159,17 @@
                         </table>
                     </div>
                     <div id="courses">
-                        <h2>Courses</h2>
+                        <h2>Courses📑</h2>
                         <p><b>Machine Learning</b>,Coursera</p>
                         <p><b>Python for Data Science</b>, Cognitive Class</p>
                     </div>
                     <div id="activities">
-                        <h2>Activities</h2>
+                        <h2>Activities🎭</h2>
                         <p><b>Participated in ETHERNALS Eth India  hackathon</b></p>
                         <p><b>Attended Machine Learning, Web development Workshops</b></p>
                     </div>
                     <div id="projects">
-                        <h2>Projects</h2>
+                        <h2>Projects👷‍♂️</h2>
                         <details>
                             <summary>
                                 International Conference on Recent Advances In Computer Science - 2021 website
@@ -82,18 +192,18 @@
                         </details>
                     </div>
                     <div id="internship">
-                        <h2>Internship</h2>
+                        <h2>Internship⚒</h2>
                         <p><b>Presimax Soft Solutions</b>, Bangalore — <i>Django Developer</i></p>
                     </div>
                     <div id="declaration">
-                        <h2>Declaration</h2>
+                        <h2>Declaration📝</h2>
                         <p>I hereby declare that the information furnished above is true to the best of my knowledge and belief.</p>
                     </div>
                 </div>
             </td>
-            <td>
+            <td class="table-right">
                 <div id="address">
-                    <h2>Address</h2>
+                    <h2>Address🏠</h2>
                     <address>
                         Bodduvandla Palli,<br>
                         Thatimakula Palli, <br>
@@ -115,7 +225,7 @@
                     </div>
                 </div>
                 <div id="social">
-                    <h2>Links</h2>
+                    <h2>Links📱</h2>
                     <ul>
                         <li>
                             <i class="fa-brands fa-github"></i><a href="https://github.com/teja003/">Github</a>
@@ -129,7 +239,7 @@
                     </ul>
                 </div>
                 <div id="skills">
-                    <h2>Skills</h2>
+                    <h2>Skills⚔</h2>
                     <div>
                         <label>HTML</label>
                         <progress max="100" value="95"></progress>
@@ -164,7 +274,7 @@
     </table>
     <hr>
     <footer>
-        <h2 style="font-family: cursive;" align="right">M Yuvateja Reddy</h2>
+        <h2 style="font-family: cursive;">M Yuvateja Reddy</h2>
     </footer>
 </body>
 </html>
