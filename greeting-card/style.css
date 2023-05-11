@@ -1,0 +1,210 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: black;
+}
+#background__video{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -10;
+}
+#background__video video {
+    height: 100%;
+    width: 100%;
+    transform: scale(1.25);
+}
+.container {
+    border-radius: .5rem;
+    width: 65rem;
+    height: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    place-items: center;
+    perspective: 1000px;
+    box-shadow: 23px 27px 83px -29px rgba(255,255,255,0.72);
+}
+#greeting__card{
+    border-radius: .5rem;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease-in-out;
+}
+
+#card__front {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background:  linear-gradient(rgba(0, 0, 0, 0.289),rgba(0, 0, 0, 0.251)),url('./prabhs__img1.jpg');
+    background-position: center;
+    background-size: cover;
+    backface-visibility: hidden;
+    transition: 1s ease-in-out;
+    color: white;
+}
+.container:hover #greeting__card{
+    transform: rotateY(180deg);
+}
+
+
+#card__back {
+    background: linear-gradient(#2E3192, #1BFFFF),url('./prabhs_img2.jpg');
+    background-blend-mode: multiply;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    color: whitesmoke;
+}
+
+#card__back > div {
+    padding: 2rem 3rem 2rem 4.5rem;
+}
+
+
+
+h1 span {
+  font: 36px Monaco, MonoSpace;
+  font-weight: 900;
+  height: 200px;
+  position: absolute;
+  width: 20px;
+  left: 480px;
+  top: -10px;
+  transform-origin: bottom center;
+}
+/* h1{
+animation-name: textrotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+
+@keyframes textrotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+} */
+
+
+.char1 { transform: rotate(15deg); }
+.char2 { transform: rotate(30deg); }
+.char3 { transform: rotate(45deg); }
+.char4 {
+  transform: rotate(60deg);
+}
+
+.char5 {
+  transform: rotate(75deg);
+}
+
+.char6 {
+  transform: rotate(90deg);
+}
+
+.char7 {
+  transform: rotate(105deg);
+}
+
+.char8 {
+  transform: rotate(120deg);
+}
+
+.char9 {
+  transform: rotate(135deg);
+}
+
+.char10 {
+  transform: rotate(150deg);
+}
+.char11 {
+  transform: rotate(165deg);
+}
+
+.char12 {
+  transform: rotate(180deg);
+}
+
+.char13 {
+  transform: rotate(195deg);
+}
+
+.char14 {
+  transform: rotate(210deg);
+}
+
+.char15 {
+  transform: rotate(225deg);
+}
+
+.char16 {
+  transform: rotate(240deg);
+}
+
+.char17 {
+  transform: rotate(255deg);
+}
+
+.char18 {
+  transform: rotate(270deg);
+}
+
+.char19 {
+  transform: rotate(285deg);
+}
+
+.char20 {
+  transform: rotate(300deg);
+}
+
+.char21 {
+  transform: rotate(315deg);
+}
+
+.char22 {
+  transform: rotate(330deg);
+}
+
+.char23 {
+  transform: rotate(345deg);
+}
+
+#card__back h1 {
+    font-size: 3.5rem;
+    margin-left: 0.5rem;
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#A1C4FD, #C2E9FB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#card__back p:first-child::first-letter{
+    font-size: 2.5rem;
+
+}
+#card__back p{
+    margin-left: 6px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
