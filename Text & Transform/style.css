@@ -1,0 +1,63 @@
+#text-style1 {
+    color: red;
+    writing-mode: vertical-rl;
+    max-width: 10rem;
+    max-height: 10rem;
+}
+#text-style2::first-letter{
+    font-size: 3rem;
+    font-weight: 700;
+}
+#text-style2 {
+    width: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#text-style2:hover {
+    overflow: visible;
+    text-overflow: unset;
+}
+
+.box {
+    height: 20rem;
+    width: 20rem;
+    margin: 4rem;
+}
+#box1 {
+    background: linear-gradient(to top right, rgb(61, 175, 206), yellow, orange);
+    box-shadow: 2px 2px 4px 2px black;
+    transition: all 600ms;
+}
+#box1:hover{
+    transform: rotateY(360deg)
+}
+
+#box2{
+    background: linear-gradient(to top right, rgb(99, 101, 101),rgb(221, 208, 186));
+    transform: scale(1);
+    transition: all 600ms;
+}
+#box2:hover{
+    transform: scale(1.5) rotate(360deg);
+}
+
+#box3 {
+    
+    background: radial-gradient(black 1%,gray 5%,green 20%, yellow);
+    border-radius: 50%;
+    border: 2px solid silver;
+    transition: all 500ms;
+}
+#box3:hover{
+    transform: rotateY(70deg) skewX(70deg);
+}
+
+#box4 {
+    background: blue;
+    transition: all 500ms;
+}
+#box4:hover{
+    
+    transform: translate(20px, 40px);
+}
