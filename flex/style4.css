@@ -1,0 +1,9 @@
+.container {
+     justify-content: center;
+    align-content: center;
+    height: 190rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
