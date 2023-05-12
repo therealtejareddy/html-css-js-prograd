@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('./images/prabhas21.jpg'),linear-gradient(#bbd2c5,#536976,#292e49);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    padding-bottom: 6rem;
+    position: relative;
+}
+#title {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+#title h1 {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6rem;
+    text-shadow: 4px 4px greenyellow;
+}
+.main{
+    padding: 0 3rem;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px,1fr));
+    grid-auto-flow: row dense;
+    grid-gap: 1.5rem;
+}
+
+.child {
+    height: 100%;
+    width: 100%;
+    box-shadow: rgba(224, 224, 224, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+    transition: 500ms;
+    transform: scale(1);
+    z-index: 0;
+}
+.child img {
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.child:hover{
+    transform: scale(1.2);
+    box-shadow: 100px 100px 1500px 1500px rgba(0, 0, 0, 0.405);
+    z-index: 10;
+}
+.child:click{
+    z-index: 0;
+    transform: scale(1);
+    box-shadow: rgba(224, 224, 224, 0.2) 0px 7px 29px 0px;
+}
+
+.wide{
+    grid-column: auto/span 2;
+}
+.tall{
+    grid-row: auto/span 2;
+}
+.wide-md{
+    grid-column: auto/span 3;
+}
+.tall-md{
+    grid-row: auto/span 3;
+}
+.wide-xl{
+    grid-column: auto/span 4;
+}
+.tall-xl{
+    grid-row: auto/span 4;
+}
+
+/* .animate {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 20;
+} */
+
+body::after{
+    content: '🌟';
+    width: 5rem;
+    height: 5rem;
+    top: 10px;
+    left: 300px;
+    position: absolute;
+    font-size: 10rem;
+    z-index: -1;
+    opacity: .2;
+    animation-name: animateicon;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+body::before{
+    content: '🌟';
+    width: 5rem;
+    height: 5rem;
+    top: 10px;
+    right: 420px;
+    position: absolute;
+    font-size: 10rem;
+    z-index: -1;
+    opacity: .2;
+    animation-name: animateicon;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+/* body::before{
+    content: '🚀';
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    font-size: 10rem;
+    animation-name: rocket;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes rocket {
+    0%{
+        bottom: -100px;
+        left: -100px;
+    }
+    10%{
+        bottom: 10px;
+        left: 10px;
+    }
+    100%{
+        top: -100px;
+        right: -100px;
+    }
+} */
+
+
+@keyframes animateicon{
+    0%{
+        content: '🌟';
+    }
+    25%{
+        content: '🤩';
+    }
+    50%{
+        content: '⭐';
+    }
+}
