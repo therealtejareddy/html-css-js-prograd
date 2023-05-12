@@ -1,0 +1,28 @@
+p {
+    background-color: yellow;
+}
+#circle {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    background-color: skyblue;
+}
+
+/* @media screen and (min-width: 600px){
+    p{
+        background-color: greenyellow;
+    }
+} */
+
+/* max -> desktop 1st */
+/* min -> mobile 1sr */
+
+@media screen and (orientation: portrait) {
+    p {
+        background-color: gray;
+        color: white;
+    }
+    #circle {
+        display: none;
+    }
+}
