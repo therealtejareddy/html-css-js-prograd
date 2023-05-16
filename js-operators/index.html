@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="mainText">_</h1>
+        <button id="add">Add</button>
+        <button id="sub">sub</button>
+        <button id="mul">mul</button>
+        <button id="div">div</button>
+        <button id="mod">mod</button>
+        <button id="check">check</button>
+        <button id="scheck">Strict Check</button>
+    </div>
+    
+    <script>
+        let a = prompt("Enter first value");
+        let b = prompt("Enter second Value");
+        function add(a,b){
+            return a+b
+        }
+        function sub(a,b){
+            return a-b;
+        }
+        function mul(a,b){
+            return a*b;
+        }
+        function div(a,b){
+            return a/b;
+        }
+        function mod(a,b){
+            return a**b;
+        }
+        function check(a,b){
+            return a==b;
+        }
+        function strictCheck(a,b){
+            return a===b;
+        }
+        let mainText = document.querySelector("#mainText")
+        function changeText(a,b,fun){
+            mainText.textContent = fun(a,b)
+        }
+        document.querySelector("#add").addEventListener("click",() => changeText(a,b,add))
+        document.querySelector("#sub").addEventListener("click",() => changeText(a,b,sub))
+        document.querySelector("#mul").addEventListener("click",() => changeText(a,b,mul))
+        document.querySelector("#div").addEventListener("click",() => changeText(a,b,div))
+        document.querySelector("#mod").addEventListener("click",() => changeText(a,b,mod))
+        document.querySelector("#check").addEventListener("click",() => changeText(a,b,check))
+        document.querySelector("#scheck").addEventListener("click",() => changeText(a,b,strictCheck))
+    </script>
+</body>
+</html>
