@@ -1,0 +1,35 @@
+Platina Bakery is celebrating the platinum year since its founding and as an offer to its customers it has announced a week offer for its customers who are buying any items irrespective of the price:
+
+For the next week starting from tomorrow there is a discount for everyday:
+
+MONDAY    - 15%
+TUESDAY   - 10%
+WEDNESDAY - 12%
+THURSDAY  - 11%
+FRIDAY    - 13%
+SATURDAY  - 14%
+SUNDAY    - 15%
+
+One customer can submit only one bill and if customer submits many bills, only first bill of the day will be taken into account.
+
+
+
+Bharat school is 150 year old school and year on year parents come in big numbers to get admission for their children. This year also the school has conducted an entrance exam for admission for various classes. The students have completed their exam and based on the marks they received they wanted to know the admission status for their application.
+
+    Below 50 - Admission Application Rejected
+    50 to 70 - Acceptable to admit
+    70 to 90 - Good to admit
+    Above 90 - Outstanding to admit
+
+Ask the parent to enter the entrance exam marks of their children and let the parents know the status of the application for the admission.
+
+
+
+
+A new shopping mall has been opened in the city. To attract people and to bring in crowd, the mall has announced some schemes. 
+If a person is visiting a shop atleast once, they will be given a welcome gift of 100GV.
+If the cost of any purchased items value is more than 1000, a 500 GV will be given.
+If the cost of any purchased items value is more than 3000, a 1500 GV will be given.
+If the cost of any purchased items value is more than 5000, a 3000 GV will be given.
+
+Based on the user visits and purchase, give the gifts to the people.

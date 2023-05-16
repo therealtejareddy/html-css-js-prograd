@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="textMain"></h1>
+        <button id="bakery-btn">Bakery</button>
+        <button id="school-btn">School</button>
+        <button id="mall-btn">Shopping Mall</button>
+    </div>
+    <script>
+        let textMain = document.querySelector("#textMain")
+        document.querySelector("#school-btn").addEventListener("click",()=>{
+            let score = parseInt(prompt("Enter your child marks"))
+            textMain.innerText = schoolStatus(score)
+        })
+        document.querySelector("#mall-btn").addEventListener("click",()=>{
+            let visitCount = parseInt(prompt("How many times you visited this shopping mall?"))
+            let shoppingValue = parseInt(prompt("Shopping Value"))
+            textMain.innerText = `Your Gift ${shoppingMall(visitCount,shoppingValue)}`
+        })
+        // Bakery
+        function bakery(bill){
+            let discount = {
+                monday: 15,
+                tuesday: 10,
+                wednesday: 12,
+                thursday: 11,
+                friday: 13,
+                saturday: 14,
+                sunday: 15
+            }
+            let amount = 0
+            let checkstatus = new Set()
+            for(let ele of bill){
+                if(!checkstatus.has(ele[0])){
+                    checkstatus.add(ele[0])
+                    amount+=ele[1]-((ele[1]*discount[ele[0]])/100)
+                }else{
+                    amount+=ele[1]
+                }
+            }
+            return amount;
+        }
+        // school
+        function schoolStatus(score){
+            if(score<50){
+                return "Admission Application Rejected"
+            }
+            else if(score >= 50 && score <70){
+                return "Acceptable to admit"
+            }
+            else if(score >= 70 && score <= 90){
+                return "Good to admit"
+            }
+            else{
+                return "Outstanding to admit"
+            }
+        }
+        // shopping mall
+        function shoppingMall(visit, purchaseCost){
+            let giftV = 0;
+            if(purchaseCost>=5000){
+                giftV = 3000
+            }
+            else if(purchaseCost>=3000){
+                giftV = 1500
+            }
+            else if(purchaseCost>=1000){
+                giftV = 500
+            }
+            if(visit>1){
+                giftV += 100
+            }
+            return giftV+"GV"
+        }
+        console.log(bakery([["monday",200],["monday",500],["tuesday",600]]));
+        console.log(schoolStatus(91));
+        console.log(shoppingMall(2,0));
+    </script>
+</body>
+</html>
