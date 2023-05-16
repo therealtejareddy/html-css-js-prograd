@@ -56,7 +56,7 @@ body {
 
 .child:hover{
     transform: scale(1.2);
-    box-shadow: 100px 100px 1500px 1500px rgba(0, 0, 0, 0.405);
+    box-shadow: 100px 100px 1500px 1500px rgba(0, 0, 0, 0.7);
     z-index: 10;
 }
 .child:click{
@@ -158,5 +158,8 @@ body::before{
     }
     50%{
         content: '⭐';
+    }
+    75%{
+        content: '🔥';
     }
 }
