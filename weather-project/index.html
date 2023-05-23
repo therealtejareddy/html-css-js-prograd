@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather App</title>
+  </head>
+  <body class="md:h-screen w-screen overflow-x-hidden bg-gradient-to-b from-gray-400 to-gray-500">
+    <div class="w-full h-16 flex items-center justify-between md:px-40 px-4">
+      <h2 class="text-3xl font-bold">Weather App</h2>
+      <select id="cityList" class="font-semibold outline-none p-2 text-center rounded-md bg-gray-400 ring-2 ring-offset-2 ring-gray-500 ring-offset-gray-400">
+        <option value="" class="bg-gray-300">Select City</option>
+        <option value="chennai">chennai</option>
+        <option value="hyderabad">hyderabad</option>
+        <option value="banglore">banglore</option>
+        <option value="paris">paris</option>
+        <option value="london">london</option>
+        <option value="berlin">berlin</option>
+        <option value="jaipur">jaipur</option>
+      </select>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 w-screen -mt-16 pt-16">
+      <div id="left" class="h-full w-full flex justify-center items-center md:p-4 p-2 sm:w-full">
+        <!-- <div class="md:p-4 p-2 h-full flex justify-center items-center sm:w-full">
+          <div class="flex flex-wrap sm:w-full w-full"> -->
+              <div class="w-full px-2 h-full">
+                  <div class=" my-auto bg-gray-900 text-white relative min-w-0 break-words rounded-lg overflow-hidden shadow-2xl mb-4 w-full dark:bg-gray-600">
+                      <div class="px-6 py-6 relative">
+                          <div class="flex mb-4 justify-between items-center">
+                              <div>
+                                <h3 class="font-bold text-5xl mb-0"><span id="mainTemp"> --&deg;</span></h3>
+                                  <h5 class="mb-0 font-medium text-xl" id="cityName"> ---- </h5>
+                                  <h6 class="mb-0" id="todayDate"> -- -- ----</h6><small id="mainDetail"> -----</small>
+                              </div>
+                              <div class="text-right" id="mainImg">
+                              </div>
+                          </div>
+                          <div class="block sm:flex justify-between items-center flex-wrap">
+                              <div class="w-full sm:w-1/2">
+                                  <div class="flex mb-2 justify-between items-center"><span>Temp</span><small id="todayTemp" class="px-2 inline-block font-bold text-lg">--&nbsp;&deg;C</small></div>
+                              </div>
+                              <div class="w-full sm:w-1/2">
+                                  <div class="flex mb-2 justify-between items-center"><span>Feels like</span><small id="todayFeels" class="px-2 inline-block font-bold text-lg">--&nbsp;&deg;C</small></div>
+                              </div>
+                              <div class="w-full sm:w-1/2">
+                                  <div class="flex mb-2 justify-between items-center"><span>Temp min</span><small id="todayMin" class="px-2 inline-block font-bold text-lg">---&nbsp;&deg;C</small></div>
+                              </div>
+                              <div class="w-full sm:w-1/2">
+                                  <div class="flex mb-2 justify-between items-center"><span>Temp max</span><small id="todayMax" class="px-2 inline-block font-bold text-lg">--&nbsp;&deg;C</small></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="divider table mx-2 text-center bg-transparent whitespace-nowrap"><span class="inline-block px-3"><small>Forecast</small></span></div>
+                      <div class="px-6 py-6 relative">
+                          <div class="text-center justify-between items-center flex" style="flex-flow: initial;" id="hrsRepost">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          <!-- </div>
+      </div> -->
+      </div>
+      <div id="right" class="flex justify-center items-center w-full md:p-4 p-2">
+        
+	<div class="max-h-[32rem] overflow-y-auto flex flex-col space-y-6 w-full max-w-screen-sm mx-auto p-10 rounded-md bg-gray-900 text-white" id="eightDaysForecast">
+
+	</div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
