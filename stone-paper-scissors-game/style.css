@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image:  linear-gradient(to top right,#0f2027e0,#203a43f0,#2c5364c0), url('/bg-img1.jpg');
+    background-position: center;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header h3 {
+    text-align: center;
+    color: white;
+}
+
+.game-body {
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.right, .left{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.ninja-img {
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    bottom: 0;
+    z-index: -1;
+}
+.ninja-img.left-img{
+    left: 4rem;
+}
+
+.ninja-img.right-img {
+    transform-origin: center;
+    transform: rotateY(180deg);
+    right: 3rem;
+}
+
+.user {
+    text-align: center;
+}
+
+.result-box {
+    margin-top: 10rem;
+}
+h2,h1 {
+    color: white;
+}
+.result-box h1 {
+    text-align: center;
+}
+
+.action-container {
+    margin-top: 7rem;
+}
+
+.btn {
+    width: 16rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: block;
+    border-radius: .3rem;
+}
+
+.btn:hover {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.score-card {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background: linear-gradient(to top left,#000428,#004e92);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    place-items: center;
+}
+.score-card span {
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+main {
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .score-card {
+        width: 10rem;
+        height: 10rem;
+        top: 20%;
+    }
+    .score-card span {
+    padding: 1rem;
+    font-size: 2rem;
+    
+    }
+    .btn {
+        width: 10rem;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 2rem;
+    }
+    body {
+        overflow: hidden;
+    }
+    .game-body{
+        margin-top: 10rem;
+    }
+    .action-container {
+    margin-top: 2rem;
+    }
+    .result-box {
+    margin-top: 2rem;
+    }
+    .ninja-img{
+        scale: 0.5;
+        bottom: -12rem;
+    }
+    .ninja-img.left-img {
+        left: 0;
+    }
+    .ninja-img.right-img {
+        right: 0;
+    }
+}

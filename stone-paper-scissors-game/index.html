@@ -2,11 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stone Paper Scissor</title>
   </head>
   <body>
+    <main>
+      <div class="score-card">
+        <h1><span id="computer-score">-</span>:<span id="user-score">-</span></h1>
+      </div>
+      <div class="header">
+        <h3>Stone Paper Scissor</h3>
+      </div>
+      <div class="game-body">
+        <div class="left">
+          <img src="/ninja.png" class="ninja-img left-img">
+          <div>
+            <div>
+              <h2 class="user">Computer</h2>
+            </div>
+            <div class="result-box">
+              <h1 id="computer-text">-</h1>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <img src="/ninja.png" class="ninja-img right-img">
+          <div>
+            <div>
+              <h2 class="user">You</h2>
+            </div>
+            <div>
+              <div class="result-box">
+                <h1 id="user-text">-</h1>
+              </div>
+              <div class="action-container">
+                <button class="btn">STONE</button>
+                <button class="btn">PAPER</button>
+                <button class="btn">SCISSOR</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
