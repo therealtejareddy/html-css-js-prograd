@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+</head>
+<body class="overflow-x-hidden bg-gradient-to-tr from-[#200122] to-[#6f0000]">
+    <header class="md:flex items-center justify-between px-4 md:px-20 md:h-20 py-1 md:py-4 text-[#F9F7F7] bg-gray-800">
+      <div class="flex items-center justify-between text-xl p-2">
+        <h2 class="md:text-2xl font-bold">Infinity Stone</h3>
+        <ion-icon name="menu-outline" class="md:hidden" id="menu-btn"></ion-icon>
+      </div>
+      <nav class="hidden md:inline-block" id="navbar">
+        <ul>
+           <li class="mx-8 py-3 md:inline-block"><a href="/">Home</a></li>
+          <li class="mx-8 py-3 md:inline-block"><a href="/track.html">Track</a></li>
+          <li class="mx-8 py-3 md:inline-block"><a href="/stones.html">Stones</a></li>
+          <li class="mx-8 py-3 md:inline-block"><a href="/team.html">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="px-10 md:px-20 my-5"><h2 class="text-3xl font-bold text-white ">Team</h2></div>
+    <div class="grid md:grid-cols-3 grid-cols-1 w-screen overflow-x-hidden gap-8 px-10" id="team-container">
+
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
+

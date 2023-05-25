@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="md:flex items-center justify-between px-4 md:px-20 md:h-20 py-1 md:py-4 text-[#F9F7F7] bg-gray-800">
+      <div class="flex items-center justify-between text-xl p-2">
+        <h2 class="md:text-2xl font-bold">Infinity Stone</h3>
+        <ion-icon name="menu-outline" class="md:hidden" id="menu-btn"></ion-icon>
+      </div>
+      <nav class="hidden md:inline-block" id="navbar">
+        <ul>
+          <li class="mx-8 py-3 md:inline-block"><a href="/">Home</a></li>
+          <li class="mx-8 py-3 md:inline-block"><a href="/track.html">Track</a></li>
+          <li class="mx-8 py-3 md:inline-block"><a href="/stones.html">Stones</a></li>
+          <li class="mx-8 py-3 md:inline-block"><a href="/team.html">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="grid grid-cols-1 md:grid-cols-6 h-full w-screen">
+        <div class="col-span-2 bg-gray-500 w-full h-full sm:pb-8">
+            <div class="px-10 md:px-20 my-5"><h2 class="text-3xl font-bold text-white">Map</h2></div>
+            <div class="px-10 flex flex-col space-y-6">
+                <div class="flex items-center justify-center bg-gray-100 p-2 rounded-lg">
+                    <img src="/images/1.png" class="h-12 w-12">
+                    <h3 class="text-lg mx-6">Power Stone</h3>
+                </div>
+                <div class="flex items-center justify-center bg-gray-100 p-2 rounded-lg">
+                    <img src="/images/2.png" class="h-12 w-12">
+                    <h3 class="text-lg mx-6">Space Stone</h3>
+                </div>
+                <div class="flex items-center justify-center bg-gray-100 p-2 rounded-lg">
+                    <img src="/images/3.png" class="h-12 w-12">
+                    <h3 class="text-lg mx-6">Reality Stone</h3>
+                </div>
+                <div class="flex items-center justify-center bg-gray-100 p-2 rounded-lg">
+                    <img src="/images/4.png" class="h-12 w-12">
+                    <h3 class="text-lg mx-6">Soul Stone</h3>
+                </div>
+                <div class="flex items-center justify-center bg-gray-100 p-2 rounded-lg">
+                    <img src="/images/5.png" class="h-12 w-12">
+                    <h3 class="text-lg mx-6">Time Stone</h3>
+                </div>
+                <div class="flex items-center justify-center bg-gray-100 p-2 rounded-lg">
+                    <img src="/images/6.png" class="h-12 w-12">
+                    <h3 class="text-lg mx-6">Mind Stone</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-4 w-full h-[40rem]" id="map">
+            
+        </div>
+    </div>
+    <script>
+         // Creating map options
+         var mapOptions = {
+            center: [17.385044, 78.486671],
+            zoom: 10
+         }
+         
+         // Creating a map object
+         var map = new L.map('map').setView([40, 40], 2);
+         
+         // Creating a Layer object
+         var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+         
+         // Adding layer to the map
+         map.addLayer(layer);
+         
+         let thanosMark = L.icon({
+            iconUrl: '/images/thanos.png',
+            iconSize: [40,40]
+         });
+         L.marker([40,40],{icon: thanosMark}).addTo(map)
+
+        // Define the locations and custom marker icons for the Infinity Stones
+        var stoneLocations = [
+            { name: 'Power Stone', lat: 31.9, lng: -99.9, icon: '/images/1.png' }, //
+            { name: 'Space Stone', lat: -8.7832, lng: 34.5085, icon: '/images/2.png' },
+            { name: 'Reality Stone', lat: 20.5937, lng: 78.9629, icon: '/images/3.png' },
+            { name: 'Soul Stone', lat: -40, lng: 177, icon: '/images/4.png' },  //
+            { name: 'Time Stone', lat: 27.7, lng: 85.3, icon: '/images/5.png' },//
+            { name: 'Mind Stone', lat: 48.8, lng: 2.3, icon: '/images/6.png' } //
+      ];
+
+        // Create markers with custom icons for each Infinity Stone
+        stoneLocations.forEach(function (stone) {
+            var customMarker = L.icon({
+                iconUrl: stone.icon,
+                iconSize: [30, 30],
+                iconAnchor: [20, 30]
+            });
+            L.marker([stone.lat, stone.lng], { icon: customMarker }).addTo(map);
+        });
+      </script>
+      <script type="module" src="main.js"></script>
+</body>
+</html>
